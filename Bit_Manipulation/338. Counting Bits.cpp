@@ -3,6 +3,7 @@
 using namespace std;
 class Solution {
 public:
+// this algorithm is called BRIAN KERNIGHANS ALGO
     int count_set_bit(int num) {
         int count = 0;
         while (num != 0) {
