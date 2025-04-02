@@ -122,6 +122,7 @@ int krushkal_algo(vector<vector<int>> adj[], int vertices)
         parent[i] = i;
     }
     vector<int> rank(vertices, 0);
+    vector<vector<int>> mst[9];
     while (pq.size() != 0)
     {
         int wt = pq.top().first;
@@ -131,6 +132,8 @@ int krushkal_algo(vector<vector<int>> adj[], int vertices)
         int pv = find_parent(parent, v);
         if (pu != pv)
         {
+            mst[u].push_back({v,wt});
+            mst[v].push_back({u,wt});
             union_by_rank(parent, rank, pu, pv);
             cost += wt;
         }
