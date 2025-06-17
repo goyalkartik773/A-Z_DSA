@@ -134,7 +134,7 @@ int krushkal_algo(vector<vector<int>> adj[], int vertices)
         {
             mst[u].push_back({v,wt});
             mst[v].push_back({u,wt});
-            union_by_rank(parent, rank, pu, pv);
+            union_by_rank(parent, rank, u, v);
             cost += wt;
         }
         pq.pop();

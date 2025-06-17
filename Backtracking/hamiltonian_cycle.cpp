@@ -4,7 +4,7 @@ using namespace std;
 vector<vector<int>> ans;
 bool is_safe(vector<vector<int>> &graph, vector<int> &path, int idx, int node)
 {
-    // jo bhi node ko hamilton banana chat hooo wo node path mai include nahi hona chaiye
+    // jo bhi node ko hamilton ka part banana chat hooo wo node path mai include nahi hona chaiye
     for (int i = 0; i <= idx; i++)
     {
         if (path[i] == node)

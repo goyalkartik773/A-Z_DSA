@@ -11,7 +11,6 @@ int getNextState(string pat, int M, int state, int x)
     // in pattern,then simply increment state
     if (state < M && x == pat[state])
         return state + 1;
-
     // ns stores the result which is next state
     int ns, i;
 

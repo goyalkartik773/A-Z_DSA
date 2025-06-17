@@ -1,5 +1,7 @@
 #include<iostream>
+#einclude<vector>
 using namespace std;
+vector<vector<string>> ans;
 void permutations(string orignal,string str){
     if(orignal.size()==0){
         cout<<str<<endl;
@@ -19,7 +21,8 @@ void permutations(string orignal,string str){
 void backtracking_permutations(string& str,int idx){
     if(idx == str.size()-1)
     {
-        cout<<str<<endl;
+        // cout<<str<<endl;
+        ans.push_back(str);
         return;
     }
     for(int i=idx;i<str.size();i++){
@@ -30,7 +33,11 @@ void backtracking_permutations(string& str,int idx){
     }
 }
 int main(){
-string str = "123";
+string str = "012";
 string s=" ";
 backtracking_permutations(str,0);
+for(auto str:ans)
+{
+    cout<<str<<endl;
+}
 }
