@@ -13,7 +13,7 @@ void add_edge(int src, int dest, bool dir = true) {
 void remove_edge(int src, int dest, bool dir = true) {
   graph[src].remove(dest);
   if (dir)
-    graph[dest].remove(src);
+  graph[dest].remove(src);
 }
 void display_graph() {
   for (int i = 0; i < graph.size(); i++) {
